@@ -1,5 +1,9 @@
+import MainNav from "../components/MainNav"
+
 export default function Header() {
     return (
-        <h1></h1>
+        <header>
+            <MainNav />
+        </header>
     )
 };

@@ -5,7 +5,7 @@ export default function MainNav() {
         <nav className="bg-white shadow-md p-4">
         <div className="container mx-auto flex justify-between items-center">
             {/* <!-- Logo --> */}
-            <a href="#" className="text-2xl font-bold text-blue-600">Logo</a>
+            <a href="#" className="text-2xl font-bold text-blue-600">Blog</a>
             
             {/* <!-- Links di navigazione --> */}
             <ul className="hidden md:flex space-x-6">
@@ -18,10 +18,6 @@ export default function MainNav() {
             <div className="hidden md:block">
                 <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Login</a>
             </div>
-            
-            {/* <!-- Icona menu mobile --> */}
-            <button className="md:hidden text-gray-700 focus:outline-none">
-            </button>
         </div>
     </nav>
     )

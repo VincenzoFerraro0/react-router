@@ -31,16 +31,20 @@ export default function SinglePost() {
     }, [id, url]); // La chiamata verrà fatta ogni volta che l'ID o l'URL cambiano
 
     return (
-        <div>
-            {/* Se il post è stato caricato, visualizzalo usando PostCard */}
-            {singlePost &&
-                <PostCard 
-                    id={singlePost.id} 
-                    title={singlePost.title} 
-                    content={singlePost.content} 
-                    tags={singlePost.tags} 
-                    url={singlePost.url} 
-                />}
+
+        <div className="bg-gray-50 p-6 min-h-screen transition-all">
+            <div className="container mx-auto " >
+                {/* Se il post è stato caricato, visualizzalo usando PostCard */}
+                {singlePost &&
+                    <PostCard
+                        id={singlePost.id}
+                        title={singlePost.title}
+                        content={singlePost.content}
+                        tags={singlePost.tags}
+                        url={singlePost.url}
+                    />}
+            </div>
+
         </div>
     );
 };

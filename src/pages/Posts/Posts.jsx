@@ -24,23 +24,29 @@ export default function Posts() {
     }, []); // Il secondo parametro `[]` assicura che la chiamata venga eseguita solo una volta
 
     return (
-        <div>
-            {/* Mappa i post ricevuti e crea una card per ognuno */}
-            <div>
-                {posts.map((post) => (
-                    <div key={post.id}>
-                        {/* Link al singolo post usando il suo ID */}
-                        <NavLink to={`${post.id}`}>
-                            <PostCard 
-                                title={post.title} 
-                                content={post.content} 
-                                tags={post.tags} 
-                                url={post.url} 
-                            />
-                        </NavLink>
-                    </div>
-                ))}
+        <div className="bg-gray-50 p-6 min-h-screen transition-all">
+            <div className="container mx-auto ">
+                {/* Mappa i post ricevuti e crea una card per ognuno */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" >
+                    {posts.map((post) => (
+                        <div
+                            key={post.id}
+                            className="p-4 border rounded-lg shadow-lg hover:shadow-2xl hover:bg-gray-200 transition-allp-4 border rounded-lg shadow-lg hover:shadow-2xl hover:bg-gray-200 transform hover:scale-105 transition-all duration-300"
+                        >
+                            {/* Link al singolo post usando il suo ID */}
+                            <NavLink to={`${post.id}`}>
+                                <PostCard
+                                    title={post.title}
+                                    content={post.content}
+                                    tags={post.tags}
+                                    url={post.url}
+                                />
+                            </NavLink>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
+
     );
 };
